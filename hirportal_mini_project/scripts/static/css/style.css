@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+  }
+.form-group{
+    display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 1em;
+}
+.news-col {
+  border-radius: 10px;
+  padding: 1em;
+  height: 320px;
+  background: #fff;
+}
+.accordion-body{
+  max-height: 170px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+input::placeholder,textarea::placeholder{
+  opacity: 1;
+  color: black;
+}
+nav{
+  background-color: #000;
+}
+.navbar-brand,.nav-link{
+  color: #fff;
+}
+.nav-link{
+  position: relative;
+}
+.nav-link:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-brand:hover{
+  color: #fff;
+}
+.nav-link::before{
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 8px;
+  right: 50%;
+  visibility: hidden;
+
+}
+.nav-link::after{
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  visibility: hidden;
+}
+.nav-link:hover::after,.nav-link:hover::before{
+  visibility: visible;
+  animation: fillUp .5s forwards;
+  
+}
+@keyframes fillUp {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50%;
+  }
+}
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+.form-group input:focus + .custom-label, .form-group textarea:focus + .custom-label, 
+input:not(:placeholder-shown) + .custom-label,.form-group textarea:not(:placeholder-shown) + .custom-label {
+    top: -15px;
+}
+.form-group input,.form-group textarea {
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid black;
+}
+.form-group input:focus,.form-group textarea:focus{
+    outline: none;
+}
+.button-block{
+    margin-top: 1em;
+}
+.standard-btn{
+    padding: .2em 2em;
+    border: none;
+}
+.send-btn{
+    background-color: greenyellow;
+}
+.cancel-btn{
+    background-color: red;
+    color: white;
+}
+.send-btn:hover{
+    background-color: green;
+    color: white;
+    transition: all .3s ease;
+}
+.cancel-btn:hover{
+    background-color:orangered;
+    color: black;
+    transition: all .3s ease;
+}
+.accordion-footer{
+    text-align: right;
+    padding: 1em;
+    text-transform: capitalize;
+}
+.accordion-button:not(.collapsed) {
+    color: #fbeae7;
+    background-color: #b2456e;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.news-title::first-letter{
+    text-transform: uppercase;
+}
+.news-title{
+    font-weight: bold; 
+    font-size: 20px;
+}
+.navbar-nav{
+    margin-left: auto !important;
+}
+
+/* Basic cuccok */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #3865b2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Fejléchez */
+  header {
+    background-color: #3865b2;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  footer p{
+    margin-bottom: 0;
+  }
+  
+  header h1 {
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mondjuk legyen egy főhír(legfigyelem felkeltőbb vagy ilyesmi) */
+  .main-news {
+    margin: 2rem 0;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .main-news h2 {
+    margin-top: 1rem;
+    color: #3865b2;
+  }
+  
+  .main-news p {
+    margin: 1rem 0;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .read-more:hover {
+    background-color: #5d99ff;
+    color: black;
+  }
+  
+  /* És a többi hír */
+  .other-news {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .other-news .news-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 49%;
+  }
+  
+  .other-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .other-news h2 {
+    margin-top: 1rem;
+  }
+  
+  .other-news p {
+    margin: 1rem 0;
+    max-height: 170px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  main{
+    padding: 1em;
+    flex-grow: 1;
+  }
+  .accordion form {
+    width: fit-content;
+    position: absolute;
+    right: -50px;
+    top: 10px;
+    z-index: 2;
+}
+.accordion-item {
+  position: relative;
+  margin-bottom: .5em;
+}
+ul.category-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0 .5em;
+  list-style: none;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+.category-fluid{
+  background-color: black;
+  padding: 1em;
+}
+.category-fluid .nav-link{
+  padding: .5em;
+}
+  
+  /* Reszponzív stílusok */
+  @media (max-width:576px){
+    #accordionExample{
+      margin-top: 1em;
+    }
+    ul.category-row {
+      gap: 0;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+  }
+  @media (min-width:576px) and (max-width:767px) {
+    #accordionExample{
+      margin-top: 1em;
+    }
+    ul.category-row {
+      gap: 0;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+
+  }
+  @media (min-width:768px) and (max-width:991px) {
+    #accordionExample{
+      margin-top: 1em;
+    }
+    ul.category-row {
+      gap: 0;
+      justify-content: space-evenly;
+      padding-left: 0;
+      flex-wrap: wrap;
+    }
+    .other-news .news-item {
+      flex-basis: 47% !important;
+    }
+  }
+  @media (min-width:992px) and (max-width:1200px) {
+    ul.category-row {
+      gap: 0;
+      justify-content: space-evenly;
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .other-news {
+      flex-direction: column;
+    }
+  }
+  
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 1631px) {
+  .other-news .news-item {
+    flex-basis: 48%;
+  }
+}
+
+
+
+
+  

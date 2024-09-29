@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+      <!-- Hero Section -->
+      <section class="text-center py-5">
+        <div class="container">
+          <h1 class="display-4">Mini Hírportál</h1>
+          <h2 class="display-4 subtitle">Mini Hírportál</h2>
+        </div>
+      </section>
+    <section class="main-news">
+      <article class="news-item">
+        {% if news %}
+        <h2>{{news[0].title}}</h2>
+        <p>{{news[0].content}}</p>
+        <button class="btn read-more">Bővebben</button>
+        {%else%}
+        <h2>Nincs feltöltve hír</h2>
+        <p>Nincs feltöltve hír</p>
+        {%endif%}
+      </article>
+    </section>
+
+    <section class="other-news">
+      {% for new in news[1:]%}
+      <article class="news-item">
+        <h2>{{new.title}}</h2>
+        <p class="news-content">{{new.content}}</p>
+        <button class="btn read-more">Bővebben</button>
+      </article>
+    {%endfor%}
+    </section>
+
+{% include 'footer.html' %}
