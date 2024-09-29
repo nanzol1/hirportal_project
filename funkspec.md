@@ -2,4 +2,5 @@
 # Főoldal
 
 A navigációs menüsorban található gombok segítségével csak az adott témához csatlakozó hírek tekinthetők meg.
+
 A híreknél szereplő gombokkal megtekinthető a választott cikk teljes formájában.
